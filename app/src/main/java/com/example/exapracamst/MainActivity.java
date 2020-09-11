@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     //funcion que Permita encontrar buscar todos los héroes que coincidan con el criterio de búsqueda
     public void buscarHeroes(){
-        
+
+
+
+
 
 
     }
