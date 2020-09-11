@@ -44,7 +44,7 @@ public class Resultados extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(Resultados.this, Grafico.class);
-                    i.putExtra("habilidades", h.getHabidad());
+                    i.putExtra("heroe", h);
                     startActivity(i);
                     //finish();
 

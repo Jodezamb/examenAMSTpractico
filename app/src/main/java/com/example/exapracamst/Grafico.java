@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 
 import com.example.exapracamst.Objetos.Habilidades;
+import com.example.exapracamst.Objetos.Heroe;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 
 public class Grafico extends AppCompatActivity {
     public BarChart graficoBarras;
+    private TextView txtNameResultado;
 
 
 
@@ -32,9 +35,12 @@ public class Grafico extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grafico);
         Intent i = getIntent();
-        Habilidades h = (Habilidades) i.getSerializableExtra("habilidades");
+        Heroe heroe = (Heroe)i.getSerializableExtra("heroe");
+        Habilidades h = heroe.getHabidad();
         iniciarGrafico();
         //graficarprueba();
+        txtNameResultado = findViewById(R.id.txtGraficoResultados);
+        txtNameResultado.setText("Grafico Habilidades: "+ heroe.getName());
         graficar(h);
     }
 
