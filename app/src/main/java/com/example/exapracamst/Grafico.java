@@ -2,9 +2,11 @@ package com.example.exapracamst;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.exapracamst.Objetos.Habilidades;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -17,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Grafico extends AppCompatActivity {
@@ -28,8 +31,11 @@ public class Grafico extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grafico);
+        Intent i = getIntent();
+        Habilidades h = (Habilidades) i.getSerializableExtra("habilidades");
         iniciarGrafico();
-        graficarprueba();
+        //graficarprueba();
+        graficar(h);
     }
 
 //metodo que inicializa el grafico
@@ -51,7 +57,7 @@ public class Grafico extends AppCompatActivity {
     //metodo que actualiza el grafico
 
 
-    /*private void graficar(Habilidades poderes){
+    private void graficar(Habilidades poderes){
         Float intelligence;
         Float power;
         Float strength;
@@ -76,7 +82,7 @@ public class Grafico extends AppCompatActivity {
 
         llenarGrafico(dato_Habilidades);
 
-    }*/
+    }
 
     private void graficarprueba(){
         Float intelligence;

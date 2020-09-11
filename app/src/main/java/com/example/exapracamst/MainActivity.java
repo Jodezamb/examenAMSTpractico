@@ -91,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
                     i.putExtra("heroes", (Serializable) heroesObtenidos);
                     i.putExtra("heroeArray", herosArray);
                     startActivity(i);
-                    finish();
+                    herosArray.clear();
+                   // finish();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
