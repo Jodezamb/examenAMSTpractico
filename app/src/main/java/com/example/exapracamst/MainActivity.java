@@ -27,18 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     //funcion que Permita encontrar buscar todos los héroes que coincidan con el criterio de búsqueda
     public void buscarHeroes(){
-<<<<<<< HEAD
         String superHeroeB = buscar.getText().toString();
         String url_registros = "https://www.superheroapi.com/api.php/3472655306131570/search/" + superHeroeB;
         
-=======
 
-
-
-
-
-
->>>>>>> 9d67d791544ccbc9604b200102b4defb30984c61
     }
 
 
